@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Data to make available to the XML via data binding. In this case,
+     the whole ViewModel, so that we can access the LiveData,
+     click handlers, and state variables. -->
+    <data>
+        <variable
+            name="jokeViewModel"
+            type="com.habib.jokes.ui.home.addJoke.JokeDialogViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".ui.home.addJoke.AddJokeDialogFragment">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Write a Joke"
+            android:textColor="@color/colorPrimaryDark" />
+
+
+        <EditText
+            android:id="@+id/joke_form_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@={jokeViewModel.joke}"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:hint="Just kidding :)"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/purple_200" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:onClick="@{()->jokeViewModel.onCancel()}"
+                android:id="@+id/joke_form_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="cancel"
+                android:textColor="@color/colorPrimary"
+                android:theme="@style/Widget.AppCompat.Button.Borderless" />
+
+
+            <Button
+                android:onClick="@{()->jokeViewModel.onSubmit()}"
+                android:id="@+id/joke_form_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:text="Submit"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

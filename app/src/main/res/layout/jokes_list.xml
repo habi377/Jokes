@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="joke"
+            type="com.habib.jokes.models.Joke" />
+    </data>
+<androidx.cardview.widget.CardView
+    android:layout_margin="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/colorPrimaryDark"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/btn_fav_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_fav_list"
+            android:id="@+id/tv_mail_list"
+            android:text="email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_marginStart="10dp"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_fav_list"
+            app:layout_constraintTop_toBottomOf="@id/tv_mail_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/tv_joke_list"
+            android:text="Laughing is an Instant break!"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:tint="@android:color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_like_outline"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_dis_like_list"
+            app:layout_constraintTop_toBottomOf="@id/tv_joke_list"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/btn_like_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:tint="@android:color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_dis_like_outline"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_like_list"
+            app:layout_constraintTop_toBottomOf="@id/tv_joke_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/btn_dis_like_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:tint="@android:color/white"
+            android:src="@drawable/ic_star_outline"
+            android:background="@android:color/transparent"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/btn_fav_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

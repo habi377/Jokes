@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "469556904960",
+    "project_id": "jokes-assignment",
+    "storage_bucket": "jokes-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469556904960:android:511d30e6503735fedb04e5",
+        "android_client_info": {
+          "package_name": "com.habib.jokes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469556904960-ejs9808deqlj6s8ge80ek1mck7i9n860.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqdswUmHCVAj9zkHwgGTJzK-QXqfJguwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469556904960-ejs9808deqlj6s8ge80ek1mck7i9n860.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

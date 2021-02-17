@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.AuthFragment">
+
+    <View
+        android:id="@+id/header_view"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/header_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/header_view"
+        app:layout_constraintEnd_toEndOf="@id/header_view"
+        app:layout_constraintStart_toStartOf="@id/header_view"
+        app:layout_constraintTop_toTopOf="@id/header_view" />
+
+    <fragment
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_view"
+        app:layout_constraintTop_toBottomOf="@id/header_view"
+        android:id="@+id/auth_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/auth_nav_graph"
+        tools:ignore="FragmentTagUsage" />
+
+    <View
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bottom_bg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
